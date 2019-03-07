@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"aosp/soong/android"
+	"squid/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -117,8 +117,8 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
-		// include custom variables
-		Aosp android.Product_variables
+		// include squid variables
+		Squid android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -236,8 +236,8 @@ type productVariables struct {
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
 
-	// include Custom variables
-	Aosp android.ProductVariables
+	// include Squid variables
+	Squid android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
